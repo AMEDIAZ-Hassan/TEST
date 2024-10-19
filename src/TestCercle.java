@@ -8,6 +8,7 @@ class TestCercle
         Cercle c1 = new Cercle();
         Cercle c2 = new Cercle();
         Cercle c3 = new Cercle();
+        Cercle c4 = new Cercle();
 
         c1.setCentre(1.0, 2.0);
         c1.setRayon(Math.sqrt(5.0)); // passe par (0, 0)
@@ -15,13 +16,17 @@ class TestCercle
         c2.setRayon(2.25);  // 2.25 > sqrt(5) => inclus le point (0, 0)
         c3.setCentre(-2.0, -5.0);
         c3.setRayon(1.0);
+        c4.setCentre(-22.0, -52.0);
+        c4.setRayon(1.0);
         System.out.println("Surface de c1 : " +  c1.surface());
         System.out.println("Surface de c2 : " +  c2.surface());
         System.out.println("Surface de c3 : " +  c3.surface());
+        System.out.println("Surface de c4 : " +  c4.surface());
 
         afficherPosition("c1", c1, 0.0, 0.0);
         afficherPosition("c2", c2, 0.0, 0.0);
         afficherPosition("c3", c3, 0.0, 0.0);
+        afficherPosition("c4", c4, 3.0, 4.0);
     }
     /* Méthode utilitaire affichant si un point est en dehors ou en dedans
      * d'un cercle donné
